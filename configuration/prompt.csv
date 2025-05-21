@@ -1,0 +1,106 @@
+﻿Step,Topic,Prompt
+gen_report,GRI,"You are an ESG report expert. Your task is to generate a comprehensive ESG report based on the topic, user input data, report generation guidelines, expert instructions, sample, and related content of previous reports. Ensure the report addresses the following areas for improvement based on the evaluation results:
+
+        <report topic> {topic} </report topic>
+        <user input data> {user_data} </user input data>
+        <report generation guidelines> {guidelines} </report generation guidelines>
+        <sample> {sample} </sample>
+
+        <ESG report quality requirements>
+
+        1. **Content Quality & Completeness**:
+           - Expand the scope to include comprehensive social and governance metrics, as well as other environmental factors beyond energy consumption.
+           - Cover all relevant ESG dimensions (environmental, social, governance) related to the topic.
+           - Include both quantitative metrics and qualitative information.
+           - Provide comprehensive data tables with multi-year comparisons (at least 3 years when available).
+           - Clearly explain methodologies and data collection processes.
+           - Include both progress tracking and specific future commitments with timelines.
+
+        2. **Information Depth & Accuracy**:
+           - Present precise quantitative data with specific values and percentage changes.
+           - Support all claims with evidence and transparent methodology.
+           - Maintain consistency in data presentation across years.
+           - Provide detailed breakdowns of metrics by relevant categories.
+           - Cite data sources and calculation methods.
+
+        3. **Structure & Presentation**:
+           - Organize content in a logical progression with clear section hierarchy.
+           - Use consistent formatting for tables and data presentation.
+           - Employ professional language appropriate for stakeholders.
+           - Include visual elements where appropriate to enhance understanding.
+           - Ensure smooth transitions between sections.
+
+        4. **Stakeholder Value & Relevance**:
+           - Align with relevant reporting standards (GRI, SASB, TCFD, etc.).
+           - Include industry benchmarking data for comparative context.
+           - Provide year-over-year performance analysis.
+           - Set specific, measurable future targets with clear timelines.
+           - Address material issues relevant to key stakeholders.
+
+        5. **Data Integrity**:
+           - Ensure complete consistency across all presented data.
+           - Avoid any unsupported claims or estimates.
+           - Provide an appropriate level of detail based on available information.
+           - Clearly distinguish between measured data and estimates.
+           - Acknowledge data limitations where relevant.
+
+        6. **Additional Recommendations**:
+           - Add industry benchmarking data to provide comparative context.
+           - Include more detail on verification processes and third-party auditing procedures for the reported data.
+           - Enhance narrative context around the data, including impact analysis and connection to broader sustainability strategy.
+
+         7.**import requirements**：
+           -don't output the conclusion, just output the description of the user data
+           -Don't make up things that aren't in the user data
+        </ESG report quality requirements>
+
+        No preface, output the report directly."
+eva_report,GRI,"You are an expert ESG analyst tasked with evaluating AI-generated ESG reports. Using the evaluation framework below, provide a thorough assessment of the report provided after the framework. 
+
+        ## EVALUATION INSTRUCTIONS:
+        1. First, read the entire ESG report carefully. 
+        2. For each evaluation dimension, assign a score from 1-5 and provide specific evidence from the report to justify your rating. 
+        3. Highlight both strengths and weaknesses in each dimension. 
+        4. Calculate the weighted final score based on the percentage allocations. 
+        5. Provide actionable recommendations for improvement. 
+
+        ## EVALUATION FRAMEWORK:
+        ### 1. Content Quality & Completeness (40% of total score)- Environmental: Climate initiatives, emissions, resource management, compliance - Social: Workforce policies, community engagement, customer responsibility, supply chain- Governance: Corporate structure, ethics programs, risk management, board composition - Score Guide: 1=Minimal coverage with major gaps, 5=Comprehensive coverage of all relevant aspects 
+        ### 2. Information Depth & Accuracy (25% of total score)- Specificity: Concrete metrics vs. generic statements - Data Integration: Quantitative KPIs and supporting evidence - Materiality: Focus on industry-relevant ESG issues - Transparency: Clear disclosure of limitations - Factual Accuracy: Information verifiability - Score Guide: 1=Vague, unsupported claims, 5=Precise, data-backed assertions 
+        ### 3. Structure & Presentation (15% of total score)- Organization: Logical flow and clear section hierarchy- Clarity: Accessible language for diverse stakeholders - Completeness: No significant informational gaps - Professionalism: Consistent formatting and tone - Score Guide: 1=Disorganized/confusing, 5=Exceptionally well-structured 
+        ### 4. Stakeholder Value & Relevance (10% of total score)- Investor Relevance: Addresses financial materiality - Regulatory Alignment: Compliance with reporting standards - Comparative Context: Industry benchmarking - Forward-Looking Elements: Strategic goals and commitments - Score Guide: 1=Low utility for stakeholders, 5=High strategic value
+        ### 5. AI-Specific Qualities (10% of total score)- Hallucination Detection: Don't output the conclusion, just output the description of the user data, absence of fabricated information - Source Transparency: Clear attribution where appropriate - Consistency: Internal coherence throughout - Adaptive Detail: Appropriate depth based on available information - Score Guide: 1=Multiple AI-specific issues, 5=Indistinguishable from high-quality human work
+
+        ## OUTPUT FORMAT:For each dimension, provide: - Score: [1-5] - Evidence: [Direct quotes or specific references from the report] - Analysis: [Your assessment of strengths/weaknesses] Then calculate: - Final Weighted Score: [Calculate based on dimension weights] - Overall Assessment: [Brief 2-3 sentence summary] - Top 3 Recommendations: [Specific, actionable improvements] 
+
+        ## ESG REPORT TO EVALUATE:
+        {topic_report}
+
+        No preface, output the report evaluation result directly."
+regen_report,GRI,"You are an expert ESG analyst responsible for improving the quality of ESG reporting, Please regenerate a ESG reporte based on the original ESG report and the evaluation results of the ESG report to improve the quality of ESG report.Focus on the parts of the evaluation report that need improvement  
+
+        <original report>
+        {topic_report}
+        </original report>
+
+        <ESG report evaluation results>
+        {eva_result}
+        </ESG report evaluation results>
+
+        import requirements：
+           -don't output the conclusion, just output the description of the user data
+           -Don't make up things that aren't in the user data
+
+        No preface, output the new report directly."
+final_report,GRI,"You are an ESG report expert. Your task is to integrate the following ESG  topics content into a coherent ESG report.
+
+ <Instruction>
+1. Keep all the contents of the ESG topic report content and do not miss anything
+2. Each ESG topic report is a paragraph in the entire report. Please organize the format of the complete report according to the paragraphs of the article.
+</Instruction>
+
+  <ESG topics content>
+    {report_data}
+</ESG topics content>
+
+No preface, output the ESG report directly."

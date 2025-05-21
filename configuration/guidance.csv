@@ -1,0 +1,206 @@
+﻿Code,Section Name,Guidance,Sample
+GRI 101-1,,,"ABC Systems Holdings Ltd is a publicly listed company on the Singapore Exchange (SGX), specializing in providing cutting-edge IT solutions and services. Established under the laws of Singapore, the company is headquartered in Singapore and has expanded its operations across multiple international markets.
+
+ABC offers a diverse portfolio of software solutions, including digital governance platforms, document management systems, and AI-driven business applications. The company primarily serves government agencies, financial institutions, and enterprises, helping them enhance operational efficiency and digital transformation. Key subsidiaries under ABC Systems Holdings Ltd further support its global presence, reinforcing its expertise in enterprise solutions.
+
+With a strong foothold in Asia-Pacific, ABC operates in countries such as Singapore, Hong Kong, Malaysia, Indonesia, Thailand, Vietnam, the Philippines, and Australia. The company continues to expand its market reach, catering to both public and private sector clients.
+
+As of its latest financial report, ABC Systems Holdings Ltd reported an annual revenue of [insert figure, if available] and maintains a robust financial position, supporting its long-term growth strategy.
+
+For the most comprehensive and up-to-date corporate and financial information, stakeholders are encouraged to review the company’s latest Annual Report and regulatory filings with the Singapore Exchange (SGX). Direct inquiries to the investor relations department can also provide further insights into the company’s performance and strategic direction."
+GRI 101-2,,,"This report covers ABC Systems Pte. Ltd., ABC Systems (USA) Inc., and ABC Systems (Europe) GmbH. The reporting boundary follows an operational control approach, including entities where the company has significant influence over sustainability-related policies and impacts. Notably, ABC Systems (Europe) GmbH is included in sustainability reporting but not in the audited consolidated financial statements due to differences in financial consolidation rules and sustainability disclosure criteria. While financial reporting is governed by accounting regulations, sustainability reporting prioritizes operational impact over financial control.
+
+To ensure data consistency, sustainability information is consolidated across all included entities, with adjustments for minority interests where relevant. Mergers, acquisitions, and disposals are accounted for by retrospectively adjusting data where feasible, maintaining comparability across reporting periods. These adjustments ensure that sustainability disclosures accurately reflect the organization's performance while aligning with GRI Standards."
+GRI 101-3,,,"ABC Systems Holdings Ltd.’s sustainability report follows the Global Reporting Initiative (GRI) Standards and covers the period from January 1, 2019, to December 31, 2019, aligning with the company’s financial reporting timeline. The report is published annually, with the latest edition released on August 30, 2020—after the reporting period—to allow for data collection, validation, and review. This ensures the accuracy and reliability of disclosed sustainability information.
+
+For inquiries regarding this report, stakeholders may contact ABC Systems Holdings Ltd. via phone (+852 2893 3673), email ([insert email]), or visit our website ([insert website]). These channels ensure accessibility and transparency in addressing sustainability-related concerns."
+GRI 101-4,,,"No restatements of previously reported sustainability information were made for the current reporting period, as all disclosed data remains accurate and consistent with prior reports. If restatements are required in future reports, ABC Systems Holdings Ltd. will provide a clear explanation of the reasons and their impact on reported metrics.
+
+To ensure data accuracy and minimize the need for restatements, the organization follows a rigorous internal review process, which includes cross-departmental validation and quality checks before publication."
+GRI 101-5,,,"ABC Systems Holdings Ltd. is committed to enhancing the credibility and reliability of its sustainability reporting through external assurance. While no external assurance was obtained for the 2020 Sustainability Report, the Board of Directors and senior executives continue to evaluate the engagement of an independent assurance provider for future reports, including the financial year ending March 31, 2021. Potential assurance will follow recognized ESG standards for publicly listed companies in Singapore, such as the Singapore Exchange (SGX) Sustainability Reporting Guide and the ISCA Sustainability Reporting Framework, ensuring alignment with best practices. Stakeholders are encouraged to provide feedback to support continuous improvement. For inquiries or suggestions, please contact ABC Systems Holdings Ltd. via email ([insert email]), website ([insert website]), or phone (+852 2893 3673)."
+GRI 302-1,302-1 Energy consumption within the organization,"a. Total fuel consumption within the organization from non-renewable sources, in joules or multiples, and including fuel types used. 
+b. Total fuel consumption within the organization from renewable sources, in joules or multiples, and including fuel types used. 
+c. In joules, watt-hours or multiples, the total:
+i. electricity consumption;
+ii. heating consumption;
+iii. cooling consumption; and
+iv. steam consumption 
+d. In joules, watt-hours or multiples, the total:
+i. electricity sold;
+ii. heating sold;
+iii. cooling sold; and
+iv. steam sold 
+e. Total energy consumption within the organization, in joules or multiples.
+f. Standards, methodologies, assumptions, and/or calculation tools used.
+g. Source of the conversion factors used","Energy consumption is a critical aspect of our organization’s environmental impact. While comprehensive data on energy use is not currently available, we recognize the importance of tracking and managing our consumption to enhance sustainability and operational efficiency.
+
+Total Energy Consumption
+
+The total energy consumption within the organization for the fiscal years FY2020, FY2019, and FY2018 was recorded as follows:
+
+FY2020: 1,314 GJ
+
+FY2019: 1,310 GJ
+
+FY2018: 1,441 GJ
+
+These figures reflect the aggregate energy usage; however, further disaggregation into specific energy sources and uses is not available at this time.
+
+To enhance transparency and support sustainability initiatives, the organization aims to improve data collection processes and provide a more detailed breakdown of energy consumption in future reporting cycles. Additionally, the organization is in the process of implementing a software system to collect energy consumption data. This initiative is expected to enhance data accuracy and reporting, enabling informed decision-making and improved energy management."
+GRI 302-2,302-2 Energy consumption outside of the organization,"a. Energy consumption outside of the organization, in joules or multiples.
+b. Standards, methodologies, assumptions, and/or calculation tools used
+c. Source of the conversion factors used.","For the fiscal year 2020, ABC Systems Holdings Ltd.'s energy consumption outside the organization totaled 1,314 gigajoules (GJ). This includes energy used for business travel, employee commuting, and outsourced data center operations, which contribute significantly to the organization’s external energy footprint. Energy consumption data was collected from utility bills, fuel receipts, and service provider reports, ensuring alignment with GRI 302: Energy 2016 for consistency and comparability. Standard conversion factors from the International Energy Agency (IEA) were applied to harmonize energy units across various sources and regions.
+
+Compared to fiscal year 2019, when external energy consumption totaled 1,280 GJ, there was a 2.7% increase, primarily driven by higher reliance on outsourced IT infrastructure to support remote operations. Where direct consumption data was unavailable, estimates were made using historical consumption patterns and industry benchmarks, with clear documentation of assumptions used. Moving forward, the company aims to enhance data accuracy by working more closely with energy providers and implementing automated tracking systems."
+GRI 302-3,302-3 Energy intensity,"a. Energy intensity ratio for the organization. 
+b. Organization-specific metric (the denominator) chosen to calculate the ratio. 
+c. Types of energy included in the intensity ratio; whether fuel, electricity, heating, cooling, steam, or all.
+d. Whether the ratio uses energy consumption within the organization, outside of it, or both.","For FY2020, ABC Systems Holdings Ltd.’s energy intensity ratio was 0.0010 GJ per USD of revenue, calculated by dividing total energy consumption (1,314 GJ) by total revenue in USD. This ratio includes electricity, heating, and cooling across operations in Hong Kong, the Philippines, and the United Kingdom. The slight improvement from 0.0011 GJ per USD in FY2019 was primarily driven by energy efficiency measures in office spaces and a shift toward remote work, reducing in-office energy use. Where regional revenue data was unavailable, estimates were made based on historical financial trends to ensure a consistent calculation. To further refine accuracy, ABC plans to track energy use by office location and implement a centralized energy management system for more precise monitoring and reduction of consumption."
+GRI 302-4,302-4 Reduction of energy consumption,"a. Amount of reductions in energy consumption achieved as a direct result of conservation and efficiency initiatives, in joules or multiples.
+b. Types of energy included in the reductions; whether fuel, electricity, heating, cooling, steam, or all.
+c. Basis for calculating reductions in energy consumption, such as base year or baseline, including the rationale for choosing it.
+d. Standards, methodologies, assumptions, and/or calculation tools used.","In fiscal year 2020, ABC Systems Holdings Ltd. achieved an absolute reduction in energy consumption of 126 GJ, representing a 8.75% decrease from FY2019. This reduction, measured against the baseline year of FY2018, includes electricity, heating, and cooling across all operational locations. The decline was driven by efficiency initiatives, such as replacing fluorescent lights with LED systems in the Philippines office, implementing automated power management for office equipment, and optimizing the use of natural light to reduce electricity consumption. Energy reductions were calculated using GHG Protocol guidelines and ISO 14001 Environmental Management System (EMS) standards in the Hong Kong office. To ensure accuracy, data was verified through regular internal audits and carbon assessments, ensuring a reliable assessment of energy efficiency improvements."
+GRI 302-5,302-5 Reduction in energy requirements of products and services,"a. Reductions in energy requirements of sold products and services achieved during the reporting period, in joules or multiples.
+b. Basis for calculating reductions in energy consumption, such as base year or baseline, including the rationale for choosing it.
+c. Standards, methodologies, assumptions, and/or calculation tools used.","During the reporting period, ABC Systems Holdings Ltd. achieved an absolute reduction of 126 GJ in the energy requirements of its software solutions and IT services, compared to the previous year. This reduction, measured against a FY2018 baseline, was primarily driven by server optimization in cloud-based services, enhancements in software efficiency, and reductions in power consumption of IT infrastructure. The energy savings were assessed by comparing pre- and post-implementation consumption levels using GHG Protocol guidelines for consistency and accuracy. To ensure reliability, the calculations assumed uniform implementation of energy-saving measures across all regions, with adjustments made for differences in product deployment and service usage patterns. Data was verified through internal audits and energy assessments, ensuring the reported reductions accurately reflect efficiency improvements."
+GRI 303-1,303-1 Interactions with water as a shared resource,"a. A description of how the organization interacts with water, including how and where water is withdrawn, consumed, and discharged, and the water-related impacts the organization has caused or contributed to, or that are directly linked to its operations, products, or services by its business relationships (e.g., impacts caused by runoff).
+b. A description of the approach used to identify water-related impacts, including the scope of assessments, their timeframe, and any tools or methodologies used.
+c. A description of how water-related impacts are addressed, including how the organization works with stakeholders to steward water as a shared resource, and how it engages with suppliers or customers with significant water-related impacts.
+d. An explanation of the process for setting any water-related goals and targets that are part of the organization’s approach to managing water and effluents, and how they relate to public policy and the local context of each area with water stress.","ABC Systems Holdings Ltd. sources water from local municipal supplies at its operational sites in Hong Kong, the Philippines, and the United Kingdom, primarily for sanitation, cooling systems, and general office use. In FY2019, total water consumption was 218 cubic meters, representing a 34% reduction from 331 cubic meters in FY2018. This data is metered, collected through water flow meters and utility bills, and verified via internal audits to ensure accuracy. All water used is discharged into municipal wastewater systems and treated in compliance with local environmental regulations. To mitigate water-related impacts, ABC has set a target to reduce water consumption by 10% by FY2022, focusing on installing water-efficient fixtures, enhancing leakage detection systems, and promoting conservation practices among employees. The company conducts annual assessments aligned with ISO 14001 standards, using consumption tracking software and engaging with local water authorities to monitor regional water stress levels and ensure regulatory compliance."
+GRI 303-2,303-2 Management of water discharge-related impacts,"a. A description of any minimum standards set for the quality of effluent discharge, and how these minimum standards were determined, including: i. how standards for facilities operating in locations with no local discharge requirements were determined; ii. any internally developed water quality standards or guidelines; iii. any sector-specific standards considered; iv. whether the profile of the receiving waterbody was considered.",
+GRI 303-3,303-3 Water withdrawal,"a. Total water withdrawal from all areas in megaliters, and a breakdown of this total by the following sources, if applicable:
+i. Surface water;
+ii. Groundwater;
+iii. Seawater;
+iv. Produced water;
+v. Third-party water.
+b. Total water withdrawal from all areas with water stress in megaliters, and a breakdown of this total by the following sources, if applicable:
+i. Surface water;
+ii. Groundwater;
+iii. Seawater;
+iv. Produced water;
+v. Third-party water, and a breakdown of this total by the withdrawal sources listed in i-iv.
+c. A breakdown of total water withdrawal from each of the sources listed in Disclosures 303-3-a and 303-3-b in megaliters by the following categories:
+i. Freshwater (≤1,000 mg/L Total Dissolved Solids);
+ii. Other water (>1,000 mg/L Total Dissolved Solids).
+d. Any contextual information necessary to understand how the data have been compiled, such as any standards, methodologies, and assumptions used.",
+GRI 303-4,303-4 Water discharge,"a. Total water discharge to all areas in megaliters, and a breakdown of this total by the following types of destination, if applicable:
+i. Surface water;
+ii. Groundwater;
+iii. Seawater;
+iv. Third-party water, and the volume of this total sent for use to other organizations, if applicable.
+b. A breakdown of total water discharge to all areas in megaliters by the following categories:
+i. Freshwater (≤1,000 mg/L Total Dissolved Solids);
+ii. Other water (>1,000 mg/L Total Dissolved Solids). 
+c. Total water discharge to all areas with water stress in megaliters, and a breakdown of this total by the following categories:
+i. Freshwater (≤1,000 mg/L Total Dissolved Solids);
+ii. Other water (>1,000 mg/L Total Dissolved Solids). 
+e. Priority substances of concern for which discharges are treated, including:
+i. how priority substances of concern were defined, and any international standard, authoritative list, or criteria used;
+ii. the approach for setting discharge limits for priority substances of concern;
+iii. number of incidents of non-compliance with discharge limits. 
+e. Any contextual information necessary to understand how the data have been compiled, such as any standards, methodologies, and assumptions used.",
+GRI 303-5,303-5 Water consumption,"a. Total water consumption from all areas in megaliters.
+b. Total water consumption from all areas with water stress in megaliters. 
+c. Change in water storage in megaliters, if water storage has been identified as having a significant water-related impact. 
+d. Any contextual information necessary to understand how the data have been compiled, such as any standards, methodologies, and assumptions used, including whether the information is calculated, estimated, modeled, or sourced from direct measurements, and the approach taken for this, such as the use of any sector-specific factors.",
+GRI 304-1,"304-1 Operational sites owned, leased, managed in, or adjacent to, protected areas and areas of high biodiversity value outside protected areas","a. For each operational site owned, leased, managed in, or adjacent to, protected areas and areas of high biodiversity value outside protected areas, the following information: 
+i. Geographic location;
+ii. Subsurface and underground land that may be owned, leased, or managed by the organization; 
+iii. Position in relation to the protected area (in the area, adjacent to, or containing portions of the protected area) or the high biodiversity value area outside protected areas; 
+iv. Type of operation (office, manufacturing or production, or extractive);
+v. Size of operational site in km2 (or another unit, if appropriate); 
+vi. Biodiversity value characterized by the attribute of the protected area or area of high biodiversity value outside the protected area (terrestrial, freshwater, or maritime ecosystem); 
+vii. Biodiversity value characterized by listing of protected status (such as IUCN Protected Area Management Categories, Ramsar Convention, national legislation).",
+GRI 304-2,"304-2 Significant impacts of activities, products, and services on biodiversity","a. Nature of significant direct and indirect impacts on biodiversity with reference to one or more of the following: 
+i. Construction or use of manufacturing plants, mines, and transport infrastructure; 
+ii. Pollution (introduction of substances that do not naturally occur in the habitat from point and non-point sources); 
+iii. Introduction of invasive species, pests, and pathogens; 
+iv. Reduction of species; 
+v. Habitat conversion; 
+vi. Changes in ecological processes outside the natural range of variation (such as salinity or changes in groundwater level). 
+b. Significant direct and indirect positive and negative impacts with reference to the following: 
+i. Species affected; 
+ii. Extent of areas impacted; 
+iii. Duration of impacts; 
+iv. Reversibility or irreversibility of the impacts.",
+GRI 304-3,304-3 Habitats protected or restored,"a. Size and location of all habitat areas protected or restored, and whether the success of the restoration measure was or is approved by independent external professionals.
+b. Whether partnerships exist with third parties to protect or restore habitat areas distinct from where the organization has overseen and implemented restoration or protection measures. 
+c. Status of each area based on its condition at the close of the reporting period. 
+d. Standards, methodologies, and assumptions used.",
+GRI 304-4,304-4 IUCN Red List species and national conservation list species with habitats in areas affected by operations,"a. Total number of IUCN Red List species and national conservation list species with habitats in areas affected by the operations of the organization, by level of extinction risk: 
+i. Critically endangered 
+ii. Endangered 
+iii. Vulnerable 
+iv. Near threatened 
+v. Least concern",
+GRI 305-1,305-1 Direct (Scope 1) GHG emissions,"a. Gross direct (Scope 1) GHG emissions in metric tons of CO2 equivalent. 
+b. Gases included in the calculation; whether CO2, CH4, N2O, HFCs, PFCs, SF6, NF3, or all. 
+c. Biogenic CO2 emissions in metric tons of CO2 equivalent. 
+d. Base year for the calculation, if applicable, including: i. the rationale for choosing it; ii. emissions in the base year; iii. the context for any significant changes in emissions that triggered recalculations of base year emissions.
+e. Source of the emission factors and the global warming potential (GWP) rates used, or a reference to the GWP source. 
+f. Consolidation approach for emissions; whether equity share, financial control, or operational control.
+g. Standards, methodologies, assumptions, and/or calculation tools used.",
+GRI 305-2,305-2 Energy indirect (Scope 2) GHG emissions,"a. Gross location-based energy indirect (Scope 2) GHG emissions in metric tons of CO2 equivalent.
+b. If applicable, gross market-based energy indirect (Scope 2) GHG emissions in metric tons of CO2 equivalent.
+c. If available, the gases included in the calculation; whether CO2, CH4, N2O, HFCs, PFCs, SF6, NF3, or all. 
+d. Base year for the calculation, if applicable, including: i. the rationale for choosing it; ii. emissions in the base year; iii. the context for any significant changes in emissions that triggered recalculations of base year emissions.
+e. Source of the emission factors and the global warming potential (GWP) rates used, or a reference to the GWP source.
+f. Consolidation approach for emissions; whether equity share, financial control, or operational control. 
+g. Standards, methodologies, assumptions, and/or calculation tools used",
+GRI 305-3,305-3 Other indirect (Scope 3) GHG emissions,"a. Gross other indirect (Scope 3) GHG emissions in metric tons of CO2 equivalent.
+b. If available, the gases included in the calculation; whether CO2, CH4, N2O, HFCs, PFCs, SF6, NF3, or all. 
+c. Biogenic CO2 emissions in metric tons of CO2 equivalent. 
+d. Other indirect (Scope 3) GHG emissions categories and activities included in the calculation.
+e. Base year for the calculation, if applicable, including: i. the rationale for choosing it; ii. emissions in the base year; iii. the context for any significant changes in emissions that triggered recalculations of base year emissions.
+f. Source of the emission factors and the global warming potential (GWP) rates used, or a reference to the GWP source. 
+g. Standards, methodologies, assumptions, and/or calculation tools used",
+GRI 305-4,305-4 GHG emissions intensity,"a. GHG emissions intensity ratio for the organization. 
+b. Organization-specific metric (the denominator) chosen to calculate the ratio. 
+c. Types of GHG emissions included in the intensity ratio; whether direct (Scope 1), energy indirect (Scope 2), and/or other indirect (Scope 3).
+d. Gases included in the calculation; whether CO2, CH4, N2O, HFCs, PFCs, SF6, NF3, or all.",
+GRI 305-5,305-5 Reduction of GHG emissions,"a. GHG emissions reduced as a direct result of reduction initiatives, in metric tons of CO equivalent. 
+b. Gases included in the calculation; whether CO2, CH4, N2O, HFCs, PFCs, SF6, NF3, or all. 
+c. Base year or baseline, including the rationale for choosing it. 
+d. Scopes in which reductions took place; whether direct (Scope 1), energy indirect (Scope 2), and/or other indirect (Scope 3).
+e. Standards, methodologies, assumptions, and/or calculation tools used.",
+GRI 305-6,305-6 Emissions of ozone-depleting substances (ODS),"a. Production, imports, and exports of ODS in metric tons of CFC-11 (trichlorofluoromethane) equivalent. 
+b. Substances included in the calculation.
+c. Source of the emission factors used.
+d. Standards, methodologies, assumptions, and/or calculation tools used.",
+GRI 305-7,"305-7 Nitrogen oxides (NOX), sulfur oxides (SOX), and other significant air emissions","a. Significant air emissions, in kilograms or multiples, for each of the following: 
+i. NOx; 
+ii. SOx; 
+iii. Persistent organic pollutants (POP); 
+iv. Volatile organic compounds (VOC); 
+v. Hazardous air pollutants (HAP); 
+vi. Particulate matter (PM); 
+vii. Other standard categories of air emissions identified in relevant regulations
+b. Source of the emission factors used. 
+c. Standards, methodologies, assumptions, and/or calculation tools used.",
+GRI 306-1,306-1 Waste generation and significant waste-related impacts,"a. For the organization’s significant actual and potential waste-related impacts, a description of: i. the inputs, activities, and outputs that lead or could lead to these impacts; ii. whether these impacts relate to waste generated in the organization’s own activities or to waste generated upstream or downstream in its value chain.",
+GRI 306-2,306-2 Management of significant waste-related impacts,"a. Actions, including circularity measures, taken to prevent waste generation in the organization’s own activities and upstream and downstream in its value chain, and to manage significant impacts from waste generated.
+b. If the waste generated by the organization in its own activities is managed by a third party, a description of the processes used to determine whether the third party manages the waste in line with contractual or legislative obligations. 
+c. The processes used to collect and monitor waste-related data.",
+GRI 306-3,306-3 Waste generated,"a. Total weight of waste generated in metric tons, and a breakdown of this total by composition of the waste. 
+b. Contextual information necessary to understand the data and how the data has been compiled.",
+GRI 306-4,306-4 Waste diverted from disposal,"a. Total weight of waste diverted from disposal in metric tons, and a breakdown of this total by composition of the waste.
+b. Total weight of hazardous waste diverted from disposal in metric tons, and a breakdown of this total by the following recovery operations: i. Preparation for reuse; ii. Recycling; iii. Other recovery operations.
+c. Total weight of non-hazardous waste diverted from disposal in metric tons, and a breakdown of this total by the following recovery operations: i. Preparation for reuse; ii. Recycling; iii. Other recovery operations.
+d. For each recovery operation listed in Disclosures 306-4-b and 306-4-c, a breakdown of the total weight in metric tons of hazardous waste and of non-hazardous waste diverted from disposal: i. onsite; ii. offsite.
+e. Contextual information necessary to understand the data and how the data has been compiled.",
+GRI 306-5,306-5 Waste directed to disposal,"a. Total weight of waste directed to disposal in metric tons, and a breakdown of this total by composition of the waste.
+b. Total weight of hazardous waste directed to disposal in metric tons, and a breakdown of this total by the following disposal operations: 
+i. Incineration (with energy recovery); 
+ii. Incineration (without energy recovery); 
+iii. Landfilling; 
+iv. Other disposal operations.
+c. Total weight of non-hazardous waste directed to disposal in metric tons, and a breakdown of this total by the following disposal operations: 
+i. Incineration (with energy recovery); 
+ii. Incineration (without energy recovery); 
+iii. Landfilling; 
+iv. Other disposal operations. 
+d. For each disposal operation listed in Disclosures 306-5-b and 306-5-c, a breakdown of the total weight in metric tons of hazardous waste and of non-hazardous waste directed to disposal: 
+i. onsite; 
+ii. offsite. 
+e. Contextual information necessary to understand the data and how the data has been compiled.",
