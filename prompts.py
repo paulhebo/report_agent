@@ -1,5 +1,7 @@
 import csv
-
+from utils.opensearch import OpenSearchService
+from utils.embedding import get_embedding_bedrock
+import boto3
 
 def get_topoics():
     topics = []
@@ -30,8 +32,19 @@ def get_guidelines(topic):
                 break
     return guidance,sample
 
-def get_pre_report(topic):
-    pass
+def get_previous_report(topic,index,top_k int:=3,embedding_model str: = 'cohere.embed-multilingual-v3'):
+    opensearch_client = OpenSearchService()
+    query_embedding = get_embedding_bedrock(embedding_model,topic)
+    results = opensearch_client.vector_search(query_embedding,index_name=index,size=top_k)
+    previous_report_str = '<reports>'
+    for result in results:
+        source = result['_source']
+        content = source['text']
+        metadata = source['metadata']
+        previous_report_str += '<report><file>'+metadata['source']+'</file><page_num>' + str(metadata['page_num']) + '</page_num><content>' + content + '</content></report>'
+    previous_report_str += '</reports>'
+    return previous_report_str
+    
 
 def get_prompt_template(step,topic):
 

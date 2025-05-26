@@ -4,6 +4,10 @@ import time
 from prompts import *
 from generate_esg_report import get_report_agent
 from generate_esg_report_sagemaker import get_report_agent_sagemaker
+from utils.pdf_data_load import *
+from utils.opensearch import OpenSearchService
+opensearch_client = OpenSearchService()
+index = 'esg_file'
 
 default_input_data= """
 | Energy | 2020 | 2021 | 2022 | 2023 |
@@ -78,6 +82,21 @@ with st.sidebar:
         with open(save_path, "wb") as f:
             f.write(file_bytes)
         st.success(f"Prompt file saved to: {save_path}")
+
+
+    pdf_file = st.file_uploader("Upload a PDF file", type='pdf')
+    if pdf_file is not None:
+        file_bytes = pdf_file.read()
+        file_name = pdf_file.name
+        save_path = "esg_docs/" + file_name
+        with open(save_path, "wb") as f:
+            f.write(file_bytes)
+        st.success(f"PDF file saved to: {save_path}")
+        conver_file_rows = conver_file(save_path)
+        for i in tqdm(range(len(conver_file_rows))):
+            row = conver_file_rows[i]
+            load_data_to_opensearch(opensearch_client,index,row)
+
 
     all_topics = get_topoics()
     topics = st.multiselect(

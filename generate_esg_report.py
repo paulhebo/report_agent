@@ -11,8 +11,14 @@ import operator
 
 from typing_extensions import Literal
 from langchain_core.messages import HumanMessage, SystemMessage
+from dotenv import load_dotenv
+import os
 
-bedrock_client = boto3.client("bedrock-runtime", region_name="us-west-2")
+load_dotenv(dotenv_path="../",verbose=True,override=True)
+region = os.getenv('region')
+
+
+bedrock_client = boto3.client("bedrock-runtime", region_name=region)
 
 class GenTopicReportState(TypedDict):
     topic:str
@@ -115,9 +121,9 @@ def get_report_agent(model_name,report_score=3.5):
             user_data = state['user_datas'][i]
             # print('user_data:',user_data)
             guidelines,sample = get_guidelines(topic)
-            pre_report = get_pre_report(topic)
+            previous_report = get_previous_report(topic)
             gen_report_prompt_template = get_prompt_template(step='gen_report',topic=topic)
-            prompt = gen_report_prompt_template.format(topic=topic, guidelines=guidelines, sample=sample, user_data=user_data)
+            prompt = gen_report_prompt_template.format(topic=topic, guidelines=guidelines, sample=sample,previous_report=previous_report, user_data=user_data)
         
             prompts.append(prompt)
         # print('prompts:',prompts)

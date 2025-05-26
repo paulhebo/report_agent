@@ -1,5 +1,8 @@
 boto3
 langchain-aws==0.2.23
 langgraph==0.4.3
-sagemaker
 streamlit
+opensearch-py==2.2.0
+docling==2.34.0
+torchvision
+python-dotenv
