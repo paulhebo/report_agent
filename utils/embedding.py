@@ -3,12 +3,12 @@ import botocore
 import json
 import base64
 import requests
-import os
 from dotenv import load_dotenv
 import os
 
-load_dotenv(dotenv_path="../",verbose=True,override=True)
+load_dotenv(verbose=True)
 region = os.getenv('region')
+
 
 bedrock_client = boto3.client("bedrock-runtime",region_name=region)
 

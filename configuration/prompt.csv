@@ -1,10 +1,14 @@
 ﻿Step,Topic,Prompt
 gen_report,GRI,"You are an ESG report expert. Your task is to generate a comprehensive ESG report based on the topic, user input data, report generation guidelines, expert instructions, sample, and related content of previous reports. Ensure the report addresses the following areas for improvement based on the evaluation results:
 
+        Reference informations:       
         <report topic> {topic} </report topic>
-        <user input data> {user_data} </user input data>
         <report generation guidelines> {guidelines} </report generation guidelines>
         <sample> {sample} </sample>
+        <previous reports>{previous_report}</previous reports>
+
+       User data:
+        <user input data> {user_data} </user input data>
 
         <ESG report quality requirements>
 
@@ -96,11 +100,17 @@ final_report,GRI,"You are an ESG report expert. Your task is to integrate the fo
 
  <Instruction>
 1. Keep all the contents of the ESG topic report content and do not miss anything
-2. Each ESG topic report is a paragraph in the entire report. Please organize the format of the complete report according to the paragraphs of the article.
 </Instruction>
 
   <ESG topics content>
     {report_data}
 </ESG topics content>
 
-No preface, output the ESG report directly."
+No preface, output the ESG report directly. the paragraphs of the article."
+</Instruction>,,
+,,
+  <ESG topics content>,,
+    {report_data},,
+</ESG topics content>,,
+,,
+No preface," output the ESG report directly.""",

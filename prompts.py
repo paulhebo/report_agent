@@ -32,16 +32,25 @@ def get_guidelines(topic):
                 break
     return guidance,sample
 
-def get_previous_report(topic,index,top_k int:=3,embedding_model str: = 'cohere.embed-multilingual-v3'):
+def get_previous_report(topic,index,top_k=3,embedding_model='cohere.embed-multilingual-v3'):
     opensearch_client = OpenSearchService()
     query_embedding = get_embedding_bedrock(embedding_model,topic)
     results = opensearch_client.vector_search(query_embedding,index_name=index,size=top_k)
+
+    selected_report = {}
     previous_report_str = '<reports>'
     for result in results:
         source = result['_source']
         content = source['text']
         metadata = source['metadata']
-        previous_report_str += '<report><file>'+metadata['source']+'</file><page_num>' + str(metadata['page_num']) + '</page_num><content>' + content + '</content></report>'
+        page_num = metadata['page_num']
+        file = metadata['source']
+        if file not in selected_report.keys():
+            selected_report[file] = [page_num]
+            previous_report_str += '<report><file>'+file+'</file><page_num>' + str(page_num) + '</page_num><content>' + content + '</content></report>'
+        elif page_num not in selected_report[file]:
+            selected_report[file].append(page_num)
+            previous_report_str += '<report><file>'+file+'</file><page_num>' + str(page_num) + '</page_num><content>' + content + '</content></report>'
     previous_report_str += '</reports>'
     return previous_report_str
     

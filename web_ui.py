@@ -3,11 +3,16 @@ import json
 import time
 from prompts import *
 from generate_esg_report import get_report_agent
-from generate_esg_report_sagemaker import get_report_agent_sagemaker
 from utils.pdf_data_load import *
 from utils.opensearch import OpenSearchService
+from tqdm import tqdm
+import torch
+torch.classes.__path__ = []
+
+
 opensearch_client = OpenSearchService()
 index = 'esg_file'
+
 
 default_input_data= """
 | Energy | 2020 | 2021 | 2022 | 2023 |
@@ -62,7 +67,7 @@ with st.sidebar:
 
     model = st.radio(
     "**Select a model for report generation and evaluation**",
-    ['us.anthropic.claude-3-7-sonnet-20250219-v1:0','us.anthropic.claude-3-5-sonnet-20241022-v2:0','amazon.nova-pro-v1:0','amazon.nova-lite-v1:0','jumpstart-dft-hf-llm-qwen2-5-7b-ins-20250520-094421']
+    ['us.anthropic.claude-3-7-sonnet-20250219-v1:0','us.anthropic.claude-3-5-sonnet-20241022-v2:0','amazon.nova-pro-v1:0','amazon.nova-lite-v1:0']
     )
 
     report_score = st.slider("Report confidence score(range from 0 to 5)", 0.0, 5.0, 3.5)
@@ -91,11 +96,16 @@ with st.sidebar:
         save_path = "esg_docs/" + file_name
         with open(save_path, "wb") as f:
             f.write(file_bytes)
-        st.success(f"PDF file saved to: {save_path}")
+        st.success(f"PDF file saved to: {save_path}, Converting the file, please wait.")
         conver_file_rows = conver_file(save_path)
-        for i in tqdm(range(len(conver_file_rows))):
+        progress_text = "PDF file is loading. Please wait."
+        my_bar = st.progress(0, text=progress_text)
+        for i in range(len(conver_file_rows)):
             row = conver_file_rows[i]
-            load_data_to_opensearch(opensearch_client,index,row)
+            load_data_to_opensearch(opensearch_client,index,file_name,row)
+            my_bar.progress(int((i+1)/len(conver_file_rows) * 100), text=progress_text)
+        my_bar.progress(100, text=f"Finish load the file: {file_name}")
+
 
 
     all_topics = get_topoics()
@@ -145,15 +155,12 @@ with st.sidebar:
 
 if st.button("Generate ESG report"):
     
-    if model.find('qwen') >=0:
-        report_agent = get_report_agent_sagemaker(model,report_score)
-    else:
-        report_agent = get_report_agent(model,report_score)
+    report_agent = get_report_agent(model,report_score)
 
     input_body = {
             "topics": topics,
-            "user_datas": user_data_list
-            #"user_datas": [user_data]*len(topics)
+            "user_datas": user_data_list,
+            "index":index
         }
 
     for step in report_agent.stream(input_body):

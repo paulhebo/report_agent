@@ -21,7 +21,7 @@ class OpenSearchService:
             region: AWS region
         """
 
-        load_dotenv(dotenv_path="../",verbose=True,override=True)
+        load_dotenv(verbose=True)
         host = os.getenv('opensearch_host')
         username = os.getenv('opensearch_username')
         password = os.getenv('opensearch_password')

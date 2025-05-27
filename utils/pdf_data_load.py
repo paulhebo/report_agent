@@ -54,7 +54,7 @@ def conver_file(file_path):
 
     return rows
 
-def load_data_to_opensearch(opensearch_client,index,row,embedding_model='cohere.embed-multilingual-v3'):
+def load_data_to_opensearch(opensearch_client,index,file_name,row,embedding_model='cohere.embed-multilingual-v3'):
     content = row["content_md"]
     sentences = content.split('\n')
     texts = []
@@ -64,12 +64,13 @@ def load_data_to_opensearch(opensearch_client,index,row,embedding_model='cohere.
         sentence = sentence.strip()
         if len(sentence) > 0:
             metadata = {}
-            metadata['sentence'] = sentence[:text_max_length] if len(sentence) > text_max_length else sentence
-            metadata['source'] = file.split('/')[-1]
+            metadata['sentence'] = sentence
+            metadata['source'] = file_name
             metadata['page_num'] = row["page_num"]
             metadatas.append(metadata)
             texts.append(content)
-            sentence_embedding = get_embedding_bedrock(embedding_model,sentence)
+            sentence_for_emb = sentence[:text_max_length] if len(sentence) > text_max_length else sentence
+            sentence_embedding = get_embedding_bedrock(embedding_model,sentence_for_emb)
             embeddings.append(sentence_embedding)
 
         opensearch_client.add_documents(
