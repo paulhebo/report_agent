@@ -1,4 +1,4 @@
-# Deploy streamlit in EC2
+# Deploy Report agent solution in EC2
 
 ### 1.Create EC2 instance
 
