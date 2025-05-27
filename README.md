@@ -2,10 +2,10 @@
 
 ### 1.Create EC2 instance
 
--Instance type: t3.xlarge
--Storage: 100GB
--Network settings choose "Allow HTTP traffic from the internet"
--IAM Role: AmazonBedrockFullAccess, AmazonOpenSearchServiceFullAccess
+- Instance type: t3.xlarge
+- Storage: 100GB
+- Network settings choose "Allow HTTP traffic from the internet"
+- IAM Role: AmazonBedrockFullAccess, AmazonOpenSearchServiceFullAccess
 
 ### 2.Connect to EC2, install the following dependencies:
 
