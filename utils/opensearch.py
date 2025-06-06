@@ -1,4 +1,4 @@
-from opensearchpy import OpenSearch, RequestsHttpConnection
+from opensearchpy import OpenSearch, RequestsHttpConnection,AWSV4SignerAuth
 import json
 import uuid
 import boto3
@@ -15,23 +15,40 @@ class OpenSearchService:
         """
         initialize OpenSearch services
         
-        Args:
-            domain_endpoint: OpenSearch endpoint
-            index_name: index name
-            region: AWS region
         """
 
         load_dotenv(verbose=True)
-        host = os.getenv('opensearch_host')
+        host = os.getenv('opensearch_host') 
+        region = os.getenv('region')
         username = os.getenv('opensearch_username')
         password = os.getenv('opensearch_password')
-        region = os.getenv('region')
         
-        port = 443
-        hosts = [{'host': host, 'port': port}]
-        http_auth = (username, password)
-    
-        self.client = OpenSearch(hosts=hosts,http_auth=http_auth,use_ssl = True)
+        print('host:',host)
+        print('username:',username)
+        print('password:',password)
+
+        if len(host) > 0 and len(region) > 0 and len(username) > 0 and len(password) >0:
+            hosts = [{'host': host, 'port': 443}]
+            http_auth = (username, password)
+            self.client = OpenSearch(hosts=hosts,http_auth=http_auth,use_ssl = True)
+
+        elif len(host) > 0 and len(region) > 0: 
+            service = 'aoss'
+            credentials = boto3.Session().get_credentials()
+
+            awsauth = AWSV4SignerAuth(credentials, region, service)
+
+            self.client = OpenSearch(
+                hosts=[{'host': host, 'port': 443}],
+                http_auth=awsauth,
+                use_ssl=True,
+                verify_certs=True,
+                connection_class=RequestsHttpConnection,
+                timeout=300
+            )
+        else:
+            self.client = None
+
 
     def _import_bulk(self) -> Any:
         """Import bulk if available, otherwise raise error."""
@@ -68,7 +85,7 @@ class OpenSearchService:
         bulk = self._import_bulk()
         not_found_error = self._import_not_found_error()
         requests = []
-        return_ids = []
+        #return_ids = []
         mapping = mapping
     
         try:
@@ -78,7 +95,7 @@ class OpenSearchService:
     
         for i, text in enumerate(texts):
             metadata = metadatas[i] if metadatas else {}
-            _id = ids[i] if ids else str(uuid.uuid4())
+            #_id = ids[i] if ids else str(uuid.uuid4())
             request = {}
             if len(embeddings) > 0 :
                 request = {
@@ -90,12 +107,12 @@ class OpenSearchService:
                 }
 
     
-            request["_id"] = _id
+            #request["_id"] = _id
             requests.append(request)
-            return_ids.append(_id)
+            #return_ids.append(_id)
         bulk(self.client, requests, max_chunk_bytes=max_chunk_bytes)
-        self.client.indices.refresh(index=index_name)
-        return return_ids
+        #self.client.indices.refresh(index=index_name)
+        #return return_ids
 
     def _default_text_mapping(
         self,
@@ -150,7 +167,7 @@ class OpenSearchService:
                 dim, engine, space_type, ef_search, ef_construction, m, vector_field
             )
 
-            return self._bulk_ingest_embeddings(
+            self._bulk_ingest_embeddings(
                 index_name,
                 embeddings,
                 texts,
@@ -180,11 +197,14 @@ class OpenSearchService:
             }
         
         try:
-            results = self.client.search(
-                body=query,
-                index=index_name
-            )
-            return results['hits']['hits']
+            if self.client is not None:
+                results = self.client.search(
+                    body=query,
+                    index=index_name
+                )
+                return results['hits']['hits']
+            else:
+                return {}
         except Exception as e:
             print(f"Vector search failed: {str(e)}")
             return []
